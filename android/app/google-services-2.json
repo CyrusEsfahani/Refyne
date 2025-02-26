@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "311657968651",
+    "project_id": "refyne-ef737",
+    "storage_bucket": "refyne-ef737.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311657968651:android:bf0d7ed12750e3f6a1030e",
+        "android_client_info": {
+          "package_name": "com.anonymous.refyne"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311657968651-pinf2786vk0ijokk2emae1821ebe8rln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEaq4ZiQlS__OmcdpO9TVH-Avs2NF1HjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311657968651-pinf2786vk0ijokk2emae1821ebe8rln.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "311657968651-t5m6hmv3ii7v6u6slu7fjk3p10edk933.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.anonymous.refyne"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

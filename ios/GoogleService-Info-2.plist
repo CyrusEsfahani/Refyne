@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>311657968651-t5m6hmv3ii7v6u6slu7fjk3p10edk933.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.311657968651-t5m6hmv3ii7v6u6slu7fjk3p10edk933</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCCWR_lN-uelh9AwMjtzu-Yt82Cjss9K-o</string>
+	<key>GCM_SENDER_ID</key>
+	<string>311657968651</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.anonymous.refyne</string>
+	<key>PROJECT_ID</key>
+	<string>refyne-ef737</string>
+	<key>STORAGE_BUCKET</key>
+	<string>refyne-ef737.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:311657968651:ios:004ae4f83331b231a1030e</string>
+</dict>
+</plist>
