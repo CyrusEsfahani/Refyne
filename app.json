@@ -1,4 +1,10 @@
 {
   "name": "Refyne",
-  "displayName": "Refyne"
+  "displayName": "Refyne",
+  "android": {
+    "package": "com.anonymous.refyne"
+  },
+  "ios": {
+    "bundleIdentifier": "com.anonymous.refyne"
+  }
 }
