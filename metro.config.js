@@ -1,17 +1,10 @@
-/**
- * Metro configuration for React Native
- * https://github.com/facebook/react-native
- *
- * @format
- */
+const { getDefaultConfig } = require('expo/metro-config');
 
-module.exports = {
-  transformer: {
-    getTransformOptions: async () => ({
-      transform: {
-        experimentalImportSupport: false,
-        inlineRequires: true,
-      },
-    }),
-  },
-};
+module.exports = (async () => {
+  const config = await getDefaultConfig(__dirname);
+  // Ensure that .ttf files are included in assetExts
+  if (!config.resolver.assetExts.includes('ttf')) {
+    config.resolver.assetExts.push('ttf');
+  }
+  return config;
+})();

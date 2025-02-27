@@ -1,10 +1,13 @@
 {
-  "name": "Refyne",
-  "displayName": "Refyne",
-  "android": {
-    "package": "com.anonymous.refyne"
-  },
-  "ios": {
-    "bundleIdentifier": "com.anonymous.refyne"
+  "expo": {
+    "name": "Refyne",
+    "slug": "refyne",
+    "android": {
+      "package": "com.anonymous.refyne"
+    },
+    "ios": {
+      "bundleIdentifier": "com.anonymous.refyne"
+    }
   }
 }
+

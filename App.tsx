@@ -1,4 +1,5 @@
 // app.tsx
+import 'react-native-url-polyfill/auto';
 import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -7,7 +8,7 @@ import { auth } from './firebaseConfig';
 import { onAuthStateChanged } from 'firebase/auth';
 import LoginScreen from './screens/LoginScreen';
 import HypertrophyTab from './screens/HypertrophyTab';
-import DietTab from './screens/DietTab';
+// import DietTab from './screens/DietTab';
 
 const Tab = createBottomTabNavigator();
 
