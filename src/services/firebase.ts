@@ -1,19 +1,21 @@
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
+    apiKey: "AIzaSyAQ8iAnf7p6nKp4_i82lXDRX5369iZVw5c",
+    authDomain: "refyne-b6ff6.firebaseapp.com",
+    projectId: "refyne-b6ff6",
+    storageBucket: "refyne-b6ff6.firebasestorage.app",
+    messagingSenderId: "871984342996",
+    appId: "1:871984342996:web:3079b72f71118a445dd841",
+    measurementId: "G-GT2GCEMCPF"
+  };
+  
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
-export const auth = firebase.auth();
-export const db = firebase.firestore();
+// Initialize Firebase services
+export const auth = getAuth(app);
+export const db = getFirestore(app);
