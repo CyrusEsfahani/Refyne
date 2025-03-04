@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import { useDispatch } from 'react-redux';
 import { signUp } from '../redux/actions/authActions';
+import { globalStyles } from '../styles';
 
-const SignupScreen = ({ navigation }: any) => {
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
+const SignupScreen = ({ navigation }) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const dispatch = useDispatch();
 
   const handleSignup = () => {
@@ -14,19 +15,27 @@ const SignupScreen = ({ navigation }: any) => {
   };
 
   return (
-    <View style={{ padding: 20 }}>
-      <TextInput label="Email" value={email} onChangeText={setEmail} style={{ marginBottom: 10 }} />
+    <View style={globalStyles.container}>
+      <Text style={globalStyles.title}>Create Your Account</Text>
+      <TextInput
+        label="Email"
+        value={email}
+        onChangeText={setEmail}
+        style={globalStyles.input}
+      />
       <TextInput
         label="Password"
         value={password}
         onChangeText={setPassword}
         secureTextEntry
-        style={{ marginBottom: 20 }}
+        style={globalStyles.input}
       />
-      <Button mode="contained" onPress={handleSignup}>
+      <Button mode="contained" onPress={handleSignup} style={globalStyles.button}>
         Sign Up
       </Button>
-      <Button onPress={() => navigation.navigate('Login')}>Go to Login</Button>
+      <Button onPress={() => navigation.navigate('Login')}>
+        Already have an account? Log In
+      </Button>
     </View>
   );
 };
