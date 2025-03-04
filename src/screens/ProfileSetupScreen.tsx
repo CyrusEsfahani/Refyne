@@ -2,7 +2,8 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { ProfileSetupProvider } from '../context/ProfileSetupContext';
-import UnitsSelectionForm from './ProfileSetup/UnitsSelectionForm';
+
+import BodyFatForm from './ProfileSetup/BodyFatForm';
 import MeasurementsForm from './ProfileSetup/MeasurementsForm';
 import DietTypeForm from './ProfileSetup/DietTypeForm';
 import FitnessGoalsForm from './ProfileSetup/FitnessGoalsForm';
@@ -11,30 +12,19 @@ import CompletionScreen from './ProfileSetup/CompletionScreen';
 
 const Stack = createStackNavigator();
 
-const steps = [
-  { name: 'UnitsSelection', component: UnitsSelectionForm, title: 'Choose Units' },
-  { name: 'Measurements', component: MeasurementsForm, title: 'Your Measurements' },
-  { name: 'DietType', component: DietTypeForm, title: 'Choose a Diet Type' },
-  { name: 'FitnessGoals', component: FitnessGoalsForm, title: 'Choose Your Goals' },
-  { name: 'StartDate', component: StartDateForm, title: 'Set Start Date' },
-  { name: 'Completion', component: CompletionScreen, title: 'Review and Save' },
-];
-
 const ProfileSetupScreen = () => {
   return (
     <ProfileSetupProvider>
       <Stack.Navigator
-        initialRouteName="UnitsSelection"
-        screenOptions={{ headerShown: true }}
+        initialRouteName="BodyFatForm"
+        screenOptions={{ headerShown: false }}
       >
-        {steps.map((step, index) => (
-          <Stack.Screen
-            key={step.name}
-            name={step.name}
-            component={step.component}
-            options={{ headerTitle: `${step.title} (Step ${index + 1} of ${steps.length})` }}
-          />
-        ))}
+        <Stack.Screen name="BodyFatForm" component={BodyFatForm} />
+        <Stack.Screen name="MeasurementsForm" component={MeasurementsForm} />
+        <Stack.Screen name="DietTypeForm" component={DietTypeForm} />
+        <Stack.Screen name="FitnessGoalsForm" component={FitnessGoalsForm} />
+        <Stack.Screen name="StartDateForm" component={StartDateForm} />
+        <Stack.Screen name="CompletionScreen" component={CompletionScreen} />
       </Stack.Navigator>
     </ProfileSetupProvider>
   );

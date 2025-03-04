@@ -1,29 +1,53 @@
 // src/screens/ProfileSetup/StartDateForm.tsx
-import React, { useState, useContext } from 'react';
-import { View, Text, Button, TextInput } from 'react-native';
+import React, { useState } from 'react';
+import { View, TextInput, StyleSheet } from 'react-native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import { useProfileSetupContext } from '../../context/ProfileSetupContext';
+import StepLayout from '../../components/StepLayout';
 
-const StartDateForm = ({ navigation }) => {
-    const { formData, updateFormData } = useProfileSetupContext();
-  const [startDate, setStartDate] = useState('');
+type RootStackParamList = {
+  StartDateForm: undefined;
+  CompletionScreen: undefined;
+};
+
+type StartDateFormNavigationProp = StackNavigationProp<RootStackParamList, 'StartDateForm'>;
+
+const StartDateForm = ({ navigation }: { navigation: StartDateFormNavigationProp }) => {
+  const { formData, updateFormData } = useProfileSetupContext();
+  const [startDate, setStartDate] = useState<string>(formData.startDate || '');
 
   const handleNext = () => {
     updateFormData({ startDate });
-    navigation.navigate('Completion');
+    navigation.navigate('CompletionScreen');
   };
 
   return (
-    <View style={{ flex: 1, padding: 20, backgroundColor: '#fff' }}>
-      <Text style={{ fontSize: 18, marginBottom: 20 }}>Set Your Diet Start Date</Text>
+    <StepLayout
+      stepText="STEP 5 OF 6"
+      title="Choose Your Start Date"
+      buttonLabel="Continue"
+      onPressButton={handleNext}
+      buttonDisabled={!startDate}
+    >
       <TextInput
         value={startDate}
         onChangeText={setStartDate}
-        placeholder="e.g., SAT MAR 1, 2025"
-        style={{ borderWidth: 1, padding: 10, marginBottom: 20 }}
+        placeholder="YYYY-MM-DD"
+        style={styles.input}
       />
-      <Button title="Next" onPress={handleNext} color="#ff0000" />
-    </View>
+    </StepLayout>
   );
 };
 
 export default StartDateForm;
+
+const styles = StyleSheet.create({
+  input: {
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 8,
+    padding: 10,
+    marginBottom: 10,
+    backgroundColor: '#f5f5f5',
+  },
+});

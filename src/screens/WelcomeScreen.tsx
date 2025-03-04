@@ -2,8 +2,23 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { Button } from 'react-native-paper';
 import { globalStyles, colors } from '../styles';
+import type { StackNavigationProp } from '@react-navigation/stack';
 
-const WelcomeScreen = ({ navigation }) => {
+// Define the navigation parameter list
+type RootStackParamList = {
+  Welcome: undefined;
+  Login: undefined;
+  Signup: undefined;
+};
+
+// Type the navigation prop for WelcomeScreen
+type WelcomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Welcome'>;
+
+type Props = {
+  navigation: WelcomeScreenNavigationProp;
+};
+
+const WelcomeScreen: React.FC<Props> = ({ navigation }) => {
   return (
     <View style={globalStyles.container}>
       <Text style={[globalStyles.title, { color: colors.primary }]}>Refyne</Text>

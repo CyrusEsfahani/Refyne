@@ -2,16 +2,28 @@ import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import { useDispatch } from 'react-redux';
+import { StackNavigationProp } from '@react-navigation/stack';
 import { signUp } from '../redux/actions/authActions';
 import { globalStyles } from '../styles';
+import type { AppDispatch } from '../redux/store';
 
-const SignupScreen = ({ navigation }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const dispatch = useDispatch();
+// Define the navigation prop type based on your navigation structure
+type RootStackParamList = {
+  Signup: undefined;
+  Login: undefined;
+  // Add other routes as needed (e.g., ProfileSetup screens)
+};
+
+// Type the navigation prop
+type SignupScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Signup'>;
+
+const SignupScreen = ({ navigation }: { navigation: SignupScreenNavigationProp }) => {
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const dispatch = useDispatch<AppDispatch>(); // Use typed dispatch
 
   const handleSignup = () => {
-    dispatch(signUp(email, password) as any);
+    dispatch(signUp(email, password));
   };
 
   return (
