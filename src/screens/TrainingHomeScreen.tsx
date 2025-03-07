@@ -1,15 +1,23 @@
 // src/screens/TrainingHomeScreen.tsx
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const TrainingHomeScreen = () => {
+  const navigation = useNavigation();
+
+  const handleBuildPlan = () => {
+    // The name "ProgramDesign" must match what you registered in your TrainingNavigator
+    navigation.navigate('ProgramDesign');
+  };
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
         <Text style={styles.header}>Training</Text>
 
         <Text style={styles.subHeader}>Design your program</Text>
-        <TouchableOpacity style={styles.card}>
+        <TouchableOpacity style={styles.card} onPress={handleBuildPlan}>
           <Text style={styles.cardTitle}>Build Your Plan</Text>
           <Text style={styles.cardDescription}>
             Choose your exercises and create a custom mesocycle.
@@ -41,7 +49,7 @@ export default TrainingHomeScreen;
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#1c1c1e', // dark background
+    backgroundColor: '#1c1c1e',
   },
   container: {
     flex: 1,
@@ -77,3 +85,4 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 });
+

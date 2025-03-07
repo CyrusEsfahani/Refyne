@@ -11,7 +11,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
-		86E2BDA66543B93FA06A102E /* libPods-Refyne.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FB8B3CD1C68DD29357FFB6 /* libPods-Refyne.a */; };
+		98909DC0F60E391511C6C6B9 /* libPods-Refyne.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD6E5BFB9550FBF74CCFCDF /* libPods-Refyne.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 		CBB0DB88656C31C6DE8A2E3A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E9A874BBD661964CB85D2642 /* PrivacyInfo.xcprivacy */; };
@@ -25,16 +25,16 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Refyne/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Refyne/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Refyne/main.m; sourceTree = "<group>"; };
-		56FB8B3CD1C68DD29357FFB6 /* libPods-Refyne.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Refyne.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C61A73E7B30486BF21CB7F9 /* Pods-Refyne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Refyne.debug.xcconfig"; path = "Target Support Files/Pods-Refyne/Pods-Refyne.debug.xcconfig"; sourceTree = "<group>"; };
 		917AF706103F454DB1DBEB2E /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "Refyne/noop-file.swift"; sourceTree = "<group>"; };
+		A250FFEC76A07173C6AC34D6 /* Pods-Refyne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Refyne.debug.xcconfig"; path = "Target Support Files/Pods-Refyne/Pods-Refyne.debug.xcconfig"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = Refyne/SplashScreen.storyboard; sourceTree = "<group>"; };
+		AFD6E5BFB9550FBF74CCFCDF /* libPods-Refyne.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Refyne.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B064A9271CDF852BC054DD1F /* Pods-Refyne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Refyne.release.xcconfig"; path = "Target Support Files/Pods-Refyne/Pods-Refyne.release.xcconfig"; sourceTree = "<group>"; };
 		B873BEAEA2544ADE8F50DFB2 /* Refyne-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "Refyne-Bridging-Header.h"; path = "Refyne/Refyne-Bridging-Header.h"; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		E9A874BBD661964CB85D2642 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Refyne/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-Refyne/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		FF5E328A6C76E6AD1D90E467 /* Pods-Refyne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Refyne.release.xcconfig"; path = "Target Support Files/Pods-Refyne/Pods-Refyne.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86E2BDA66543B93FA06A102E /* libPods-Refyne.a in Frameworks */,
+				98909DC0F60E391511C6C6B9 /* libPods-Refyne.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				56FB8B3CD1C68DD29357FFB6 /* libPods-Refyne.a */,
+				AFD6E5BFB9550FBF74CCFCDF /* libPods-Refyne.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,8 +125,8 @@
 		D65327D7A22EEC0BE12398D9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6C61A73E7B30486BF21CB7F9 /* Pods-Refyne.debug.xcconfig */,
-				FF5E328A6C76E6AD1D90E467 /* Pods-Refyne.release.xcconfig */,
+				A250FFEC76A07173C6AC34D6 /* Pods-Refyne.debug.xcconfig */,
+				B064A9271CDF852BC054DD1F /* Pods-Refyne.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -146,15 +146,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Refyne" */;
 			buildPhases = (
-				8163C8CEC2F0450DF87F6767 /* [CP] Check Pods Manifest.lock */,
+				6C65BE588B82D6AC1FA03DFE /* [CP] Check Pods Manifest.lock */,
 				34CD6585F9241B2D4B99A213 /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				7C88BDCD3134A6B162E35906 /* [CP] Embed Pods Frameworks */,
-				356D2B4514FD87B96E7358AE /* [CP] Copy Pods Resources */,
-				FCB1875DFB5C02232A53A3E1 /* [CP-User] [RNFB] Core Configuration */,
+				1C9CE68F28F5A5709E7A997A /* [CP] Embed Pods Frameworks */,
+				0ADFADDA738590495AA53F0A /* [CP] Copy Pods Resources */,
+				CCADD0D73D5878002759D031 /* [CP-User] [RNFB] Core Configuration */,
 			);
 			buildRules = (
 			);
@@ -227,26 +227,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if [[ -f \"$PODS_ROOT/../.xcode.env\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env\"\nfi\nif [[ -f \"$PODS_ROOT/../.xcode.env.local\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.local\"\nfi\n\n# The project root by default is one level up from the ios directory\nexport PROJECT_ROOT=\"$PROJECT_DIR\"/..\n\nif [[ \"$CONFIGURATION\" = *Debug* ]]; then\n  export SKIP_BUNDLING=1\nfi\nif [[ -z \"$ENTRY_FILE\" ]]; then\n  # Set the entry JS file using the bundler's entry resolution.\n  export ENTRY_FILE=\"$(\"$NODE_BINARY\" -e \"require('expo/scripts/resolveAppEntry')\" \"$PROJECT_ROOT\" ios absolute | tail -n 1)\"\nfi\n\nif [[ -z \"$CLI_PATH\" ]]; then\n  # Use Expo CLI\n  export CLI_PATH=\"$(\"$NODE_BINARY\" --print \"require.resolve('@expo/cli', { paths: [require.resolve('expo/package.json')] })\")\"\nfi\nif [[ -z \"$BUNDLE_COMMAND\" ]]; then\n  # Default Expo CLI command for bundling\n  export BUNDLE_COMMAND=\"export:embed\"\nfi\n\n# Source .xcode.env.updates if it exists to allow\n# SKIP_BUNDLING to be unset if needed\nif [[ -f \"$PODS_ROOT/../.xcode.env.updates\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.updates\"\nfi\n# Source local changes to allow overrides\n# if needed\nif [[ -f \"$PODS_ROOT/../.xcode.env.local\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.local\"\nfi\n\n`\"$NODE_BINARY\" --print \"require('path').dirname(require.resolve('react-native/package.json')) + '/scripts/react-native-xcode.sh'\"`\n\n";
 		};
-		34CD6585F9241B2D4B99A213 /* [Expo] Configure project */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[Expo] Configure project";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-Refyne/expo-configure-project.sh\"\n";
-		};
-		356D2B4514FD87B96E7358AE /* [CP] Copy Pods Resources */ = {
+		0ADFADDA738590495AA53F0A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -314,7 +295,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Refyne/Pods-Refyne-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7C88BDCD3134A6B162E35906 /* [CP] Embed Pods Frameworks */ = {
+		1C9CE68F28F5A5709E7A997A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -332,7 +313,26 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Refyne/Pods-Refyne-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8163C8CEC2F0450DF87F6767 /* [CP] Check Pods Manifest.lock */ = {
+		34CD6585F9241B2D4B99A213 /* [Expo] Configure project */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Expo] Configure project";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-Refyne/expo-configure-project.sh\"\n";
+		};
+		6C65BE588B82D6AC1FA03DFE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -354,7 +354,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FCB1875DFB5C02232A53A3E1 /* [CP-User] [RNFB] Core Configuration */ = {
+		CCADD0D73D5878002759D031 /* [CP-User] [RNFB] Core Configuration */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -386,7 +386,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C61A73E7B30486BF21CB7F9 /* Pods-Refyne.debug.xcconfig */;
+			baseConfigurationReference = A250FFEC76A07173C6AC34D6 /* Pods-Refyne.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -423,7 +423,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF5E328A6C76E6AD1D90E467 /* Pods-Refyne.release.xcconfig */;
+			baseConfigurationReference = B064A9271CDF852BC054DD1F /* Pods-Refyne.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

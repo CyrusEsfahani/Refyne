@@ -1,6 +1,7 @@
 // src/screens/ProfileSetup/StartDateForm.tsx
 import React, { useState } from 'react';
-import { View, TextInput, StyleSheet } from 'react-native';
+import { View, Text, Button, Platform, StyleSheet } from 'react-native';
+import DateTimePicker from '@react-native-community/datetimepicker';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useProfileSetupContext } from '../../context/ProfileSetupContext';
 import StepLayout from '../../components/StepLayout';
@@ -14,10 +15,30 @@ type StartDateFormNavigationProp = StackNavigationProp<RootStackParamList, 'Star
 
 const StartDateForm = ({ navigation }: { navigation: StartDateFormNavigationProp }) => {
   const { formData, updateFormData } = useProfileSetupContext();
-  const [startDate, setStartDate] = useState<string>(formData.startDate || '');
+  // If formData.startDate exists, parse it; otherwise default to today's date
+  const [date, setDate] = useState<Date>(
+    formData.startDate ? new Date(formData.startDate) : new Date()
+  );
+  const [showPicker, setShowPicker] = useState(false);
+
+  const handleChange = (event: any, selectedDate?: Date) => {
+    // For iOS, the picker remains open until the user taps Done.
+    // For Android, the picker closes immediately on selection.
+    if (Platform.OS === 'android') {
+      setShowPicker(false);
+    }
+    if (selectedDate) {
+      setDate(selectedDate);
+    }
+  };
+
+  const openPicker = () => {
+    setShowPicker(true);
+  };
 
   const handleNext = () => {
-    updateFormData({ startDate });
+    // Save date in ISO format or as a string
+    updateFormData({ startDate: date.toISOString() });
     navigation.navigate('CompletionScreen');
   };
 
@@ -27,14 +48,22 @@ const StartDateForm = ({ navigation }: { navigation: StartDateFormNavigationProp
       title="Choose Your Start Date"
       buttonLabel="Continue"
       onPressButton={handleNext}
-      buttonDisabled={!startDate}
     >
-      <TextInput
-        value={startDate}
-        onChangeText={setStartDate}
-        placeholder="YYYY-MM-DD"
-        style={styles.input}
-      />
+      <View style={styles.container}>
+        <Text style={styles.label}>Selected Date:</Text>
+        <Text style={styles.value}>{date.toDateString()}</Text>
+
+        <Button title="Pick a Date" onPress={openPicker} />
+
+        {showPicker && (
+          <DateTimePicker
+            value={date}
+            mode="date"
+            display="default"
+            onChange={handleChange}
+          />
+        )}
+      </View>
     </StepLayout>
   );
 };
@@ -42,12 +71,16 @@ const StartDateForm = ({ navigation }: { navigation: StartDateFormNavigationProp
 export default StartDateForm;
 
 const styles = StyleSheet.create({
-  input: {
-    borderWidth: 1,
-    borderColor: '#ddd',
-    borderRadius: 8,
-    padding: 10,
+  container: {
+    marginTop: 20,
+  },
+  label: {
+    fontSize: 16,
+    marginBottom: 5,
+  },
+  value: {
+    fontSize: 16,
     marginBottom: 10,
-    backgroundColor: '#f5f5f5',
+    fontWeight: '600',
   },
 });

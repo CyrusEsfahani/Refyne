@@ -1,6 +1,6 @@
 // src/screens/ProfileSetup/MeasurementsForm.tsx
 import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useProfileSetupContext } from '../../context/ProfileSetupContext';
@@ -41,44 +41,54 @@ const MeasurementsForm = ({ navigation }: { navigation: MeasurementsFormNavigati
       buttonLabel="Continue"
       onPressButton={handleNext}
     >
-      <View style={styles.labelRow}>
-        <Text style={styles.label}>Chest</Text>
-        <Picker
-          selectedValue={measurements.chest}
-          style={styles.picker}
-          onValueChange={(itemValue) => setMeasurements({ ...measurements, chest: itemValue })}
-        >
-          {numericOptions.map((val) => (
-            <Picker.Item key={val} label={val} value={val} />
-          ))}
-        </Picker>
-      </View>
+      <ScrollView style={{ flex: 1 }}>
+        <View style={styles.labelRow}>
+          <Text style={styles.label}>Chest</Text>
+          <Picker
+            selectedValue={measurements.chest}
+            style={styles.picker}
+            onValueChange={(itemValue) =>
+              setMeasurements({ ...measurements, chest: itemValue })
+            }
+          >
+            {numericOptions.map((val) => (
+              <Picker.Item key={val} label={val} value={val} />
+            ))}
+          </Picker>
+        </View>
 
-      <View style={styles.labelRow}>
-        <Text style={styles.label}>Arms</Text>
-        <Picker
-          selectedValue={measurements.arms}
-          style={styles.picker}
-          onValueChange={(itemValue) => setMeasurements({ ...measurements, arms: itemValue })}
-        >
-          {numericOptions.map((val) => (
-            <Picker.Item key={val} label={val} value={val} />
-          ))}
-        </Picker>
-      </View>
+        <View style={styles.labelRow}>
+          <Text style={styles.label}>Arms</Text>
+          <Picker
+            selectedValue={measurements.arms}
+            style={styles.picker}
+            onValueChange={(itemValue) =>
+              setMeasurements({ ...measurements, arms: itemValue })
+            }
+          >
+            {numericOptions.map((val) => (
+              <Picker.Item key={val} label={val} value={val} />
+            ))}
+          </Picker>
+        </View>
 
-      <View style={styles.labelRow}>
-        <Text style={styles.label}>Waist</Text>
-        <Picker
-          selectedValue={measurements.waist}
-          style={styles.picker}
-          onValueChange={(itemValue) => setMeasurements({ ...measurements, waist: itemValue })}
-        >
-          {numericOptions.map((val) => (
-            <Picker.Item key={val} label={val} value={val} />
-          ))}
-        </Picker>
-      </View>
+        <View style={styles.labelRow}>
+          <Text style={styles.label}>Waist</Text>
+          <Picker
+            selectedValue={measurements.waist}
+            style={styles.picker}
+            onValueChange={(itemValue) =>
+              setMeasurements({ ...measurements, waist: itemValue })
+            }
+          >
+            {numericOptions.map((val) => (
+              <Picker.Item key={val} label={val} value={val} />
+            ))}
+          </Picker>
+        </View>
+
+        {/* Add more inputs if needed */}
+      </ScrollView>
     </StepLayout>
   );
 };

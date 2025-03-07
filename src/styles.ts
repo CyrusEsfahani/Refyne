@@ -48,3 +48,38 @@ export const globalStyles = StyleSheet.create({
     marginTop: 10,
   },
 });
+const styles = StyleSheet.create({
+    exerciseItem: {
+      flexDirection: 'row',
+      padding: 10,
+      borderBottomWidth: 1,
+      borderBottomColor: '#ccc',
+    },
+    selectedItem: {
+      backgroundColor: '#e0e0e0',
+    },
+    exerciseIcon: {
+      width: 80,
+      height: 80,
+      marginRight: 10,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#2c2c2e', // Dark background for placeholder
+    },
+    noImageText: {
+      color: '#ccc',
+      fontSize: 12,
+      textAlign: 'center',
+    },
+    exerciseName: {
+      fontSize: 16,
+      fontWeight: 'bold',
+    },
+    exerciseDetail: {
+      fontSize: 14,
+      color: '#666',
+    },
+    listContent: {
+      paddingBottom: 20,
+    },
+  });
